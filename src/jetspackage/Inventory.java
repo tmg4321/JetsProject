@@ -50,7 +50,7 @@ public class Inventory {
 		double speed = kb.nextInt();
 		System.out.print("\n\nEnter aircraft range in NM>> ");
 		int range = kb.nextInt();
-		System.out.print("\n\nEnter aircraft price; no commas but underscores are ok (e.g. 1_000_000)>> ");
+		System.out.print("\n\nEnter aircraft price; no commas (e.g. 1000000)>> ");
 		double price = kb.nextDouble();
 		Jet new1 = new Jet(model, speed, range, price, pilot);
 		Jet[] temp = new Jet[jets.length + 1];
