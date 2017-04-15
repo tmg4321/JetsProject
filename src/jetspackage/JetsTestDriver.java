@@ -5,11 +5,11 @@ import java.util.Scanner;
 public class JetsTestDriver {
 	public static void main(String[] args) {
 		
-		Jet jet0 = new Jet("Airbus A320", 511.0, 3300, 98_000_000);
-		Jet jet1 = new Jet("Boeing 737-800", 543.0, 3115, 79_000_000);
-		Jet jet2 = new Jet("Boeing 777-300ER", 764.0, 7370, 320_000_000);
-		Jet jet3 = new Jet("Honda HondaJet", 435.0, 1400, 4_500_000);
-		Jet jet4 = new Jet("Airbus A380-800", 646.0, 8_200, 404_000_000);
+		Jet jet0 = new Jet("A320", 511.0, 3300, 98_000_000);
+		Jet jet1 = new Jet("B737-800", 543.0, 3115, 79_000_000);
+		Jet jet2 = new Jet("B777-300", 764.0, 7370, 320_000_000);
+		Jet jet3 = new Jet("HondaJet", 435.0, 1400, 4_500_000);
+		Jet jet4 = new Jet("A380-800", 646.0, 8_200, 404_000_000);
 		
 		Jet[] jets = {jet0, jet1, jet2, jet3, jet4};
 		
@@ -30,12 +30,14 @@ public class JetsTestDriver {
 			
 			case 2:
 				i.findFastest(jets);
-				System.out.println("\nFastest jet currently in inventory: " + jets[0].toString());
+				System.out.print("\nFastest: " + jets[0].toString());
+				System.out.println("");
 				break;
 		
 			case 3:
 				i.findLongestRange(jets);
-				System.out.println("\nJet with longest range currently in inventory: " + jets[0].toString());
+				System.out.print("\nBest Range: " + jets[0].toString());
+				System.out.println("");
 				break;
 		
 			case 4:
@@ -88,12 +90,12 @@ public class JetsTestDriver {
 		System.out.println("\n**********************************");
 		System.out.println("*     Jet Inventory Database     *");
 		System.out.println("**********************************");
-		System.out.println("\n\tEnter 1 to List Fleet");
-		System.out.println("\tEnter 2 to View Fastest Jet");
-		System.out.println("\tEnter 3 to View Jet With Longest Range");
-		System.out.println("\tEnter 4 to Add New Jet To Fleet");
-		System.out.println("\tEnter 5 to Quit");
-		System.out.print("\t>>" );
+		System.out.println("\nEnter 1 to List Fleet");
+		System.out.println("Enter 2 to View Fastest Jet");
+		System.out.println("Enter 3 to View Jet With Longest Range");
+		System.out.println("Enter 4 to Add New Jet To Fleet");
+		System.out.println("Enter 5 to Quit");
+		System.out.print(">>" );
 		
 		Scanner kb = new Scanner(System.in);
 		int menuChoice = kb.nextInt();

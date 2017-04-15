@@ -13,16 +13,16 @@ public class Jet {
 	public Jet(String model, double speed, int range, double price) {
 		super();
 		this.model = model;
-		this.speed = speed;
+		this.speed = speed/761.2070;
 		this.range = range;
-		this.price = price;
+		this.price = price/1_000_000;
 	}
 
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Jet [model=").append(model).append(", speed=").append(speed).append(", range=").append(range)
-				.append(", price=").append(price).append("]");
+		builder.append("\n").append(model).append("\t\t speed: Mach ").append(speed).append("\t\t range: ").append(range)
+				.append("\t\t price: ").append(price).append(" Million");
 		return builder.toString();
 	}
 

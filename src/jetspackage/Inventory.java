@@ -6,17 +6,17 @@ public class Inventory {
 	
 	public Jet[] findLongestRange(Jet[] jets) {
 		int j;
-		boolean flag = true; // set flag to true to begin first pass
-		Jet temp = new Jet(); // holding variable
+		boolean flag = true;
+		Jet temp = new Jet();
 
 		while (flag) {
-			flag = false; // set flag to false awaiting a possible swap
+			flag = false;
 			for (j = 0; j < jets.length - 1; j++) {
 				if (jets[j].getRange() < jets[j + 1].getRange()) {
-					temp = jets[j]; // swap elements
+					temp = jets[j];
 					jets[j] = jets[j + 1];
 					jets[j + 1] = temp;
-					flag = true; // shows a swap occurred
+					flag = true;
 				}
 			}
 		}
@@ -25,17 +25,17 @@ public class Inventory {
 
 	public Jet[] findFastest(Jet[] jets) {
 		int j;
-		boolean flag = true; // set flag to true to begin first pass
-		Jet temp = new Jet(); // holding variable
+		boolean flag = true;
+		Jet temp = new Jet();
 
 		while (flag) {
-			flag = false; // set flag to false awaiting a possible swap
+			flag = false;
 			for (j = 0; j < jets.length - 1; j++) {
 				if (jets[j].getSpeed() < jets[j + 1].getSpeed()) {
-					temp = jets[j]; // swap elements
+					temp = jets[j];
 					jets[j] = jets[j + 1];
 					jets[j + 1] = temp;
-					flag = true; // shows a swap occurred
+					flag = true;
 				}
 			}
 		}
