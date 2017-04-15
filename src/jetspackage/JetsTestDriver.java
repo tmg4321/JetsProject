@@ -4,12 +4,20 @@ import java.util.Scanner;
 
 public class JetsTestDriver {
 	public static void main(String[] args) {
+		Pilot a = new Pilot("Abigale");
+		Pilot b = new Pilot("Bob");
+		Pilot c = new Pilot("Christy");
+		Pilot d = new Pilot("Daryl");
+		Pilot e = new Pilot("Elaine");
 		
-		Jet jet0 = new Jet("A320", 511.0, 3300, 98_000_000);
-		Jet jet1 = new Jet("B737-800", 543.0, 3115, 79_000_000);
-		Jet jet2 = new Jet("B777-300", 764.0, 7370, 320_000_000);
-		Jet jet3 = new Jet("HondaJet", 435.0, 1400, 4_500_000);
-		Jet jet4 = new Jet("A380-800", 646.0, 8_200, 404_000_000);
+		Pilot[] pilots = {a,b,c,d,e};
+		
+		Jet jet0 = new Jet("A320", 511.0, 3300, 98_000_000.0, a.getName());
+		Jet jet1 = new Jet("B737-800", 543.0, 3115, 79_000_000.0, b.getName());
+		Jet jet2 = new Jet("B777-300", 764.0, 7370, 320_000_000.0, c.getName());
+		Jet jet3 = new Jet("HondaJet", 435.0, 1400, 4_500_000.0, d.getName());
+		Jet jet4 = new Jet("A380-800", 646.0, 8_200, 404_000_000.0, e.getName());
+		
 		
 		Jet[] jets = {jet0, jet1, jet2, jet3, jet4};
 		
@@ -30,18 +38,19 @@ public class JetsTestDriver {
 			
 			case 2:
 				i.findFastest(jets);
-				System.out.print("\nFastest: " + jets[0].toString());
+				System.out.print("\nFastest is " + jets[0].toString());
 				System.out.println("");
 				break;
 		
 			case 3:
 				i.findLongestRange(jets);
-				System.out.print("\nBest Range: " + jets[0].toString());
+				System.out.print("\nBest Range is " + jets[0].toString());
 				System.out.println("");
 				break;
 		
 			case 4:
-				jets = i.addNewJet(jets);
+				Pilot p = new Pilot();
+				jets = i.addNewJet(jets, p.getARandomPilot(pilots));
 				break;
 			
 			case 5:
@@ -84,7 +93,7 @@ public class JetsTestDriver {
 //			System.out.println("");
 //		}
 	}
-
+	
 	private static int runMenu() {
 		
 		System.out.println("\n**********************************");

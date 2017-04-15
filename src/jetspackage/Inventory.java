@@ -42,7 +42,7 @@ public class Inventory {
 		return jets;
 	}
 
-	public Jet[] addNewJet(Jet[] jets) {
+	public Jet[] addNewJet(Jet[] jets, String pilot) {
 		System.out.print("\n\nEnter aircraft model>> ");
 		Scanner kb = new Scanner(System.in);
 		String model = kb.nextLine();
@@ -52,7 +52,7 @@ public class Inventory {
 		int range = kb.nextInt();
 		System.out.print("\n\nEnter aircraft price in millions, no commas but underscores are ok (e.g. 1_000_000)>> ");
 		double price = kb.nextDouble();
-		Jet new1 = new Jet(model, speed, range, price);
+		Jet new1 = new Jet(model, speed, range, price, pilot);
 		Jet[] temp = new Jet[jets.length + 1];
 		for (int i = 0; i < temp.length - 1; i++) {
 			temp[i] = jets[i];
