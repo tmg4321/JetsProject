@@ -21,8 +21,8 @@ public class Jet {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("\n").append(model).append("\t\t speed: Mach ").append(speed).append("\t\t range: ").append(range)
-				.append("\t\t price: ").append(price).append(" Million");
+		builder.append(model).append("\t speed: Mach ").append(speed).append("\t range: ").append(range)
+				.append(" NM").append("\t price: ").append(price).append(" Million");
 		return builder.toString();
 	}
 
