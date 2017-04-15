@@ -12,8 +12,6 @@ public class JetsTestDriver {
 		Jet jet4 = new Jet("A380-800", 646.0, 8_200, 404_000_000);
 		
 		Jet[] jets = {jet0, jet1, jet2, jet3, jet4};
-
-		System.out.println(Double.toString(jet0.getSpeed()));
 		
 		boolean flag = true;
 		while (flag) {
