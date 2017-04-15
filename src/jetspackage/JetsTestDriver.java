@@ -59,39 +59,9 @@ public class JetsTestDriver {
 				break;		
 			}
 		}
+	
+		
 
-
-
-		
-//		String [][] jets = 
-//			{{"Airbus A380-800", "646", "8_200", "404_000_000.00"},
-//			{"Boeing 737-800", "543", "3,115", "79_000_000.00"},
-//			{"Boeing 777-300ER", "564", "7,370", "320_000_000.00",},
-//			{"Honda HondaJet", "435", "1,400", "4_500_000"},
-//			{"Airbus A320", "511", "3,300", "98_000_000"}};
-		
-//		for (int row = 0; row < jets.length; row++) {
-//			for (int col = 0; col < jets[row].length; col++) {
-//				System.out.print(jets[row][col].toString() + "\t\t");
-//			}
-//			System.out.println("");
-//		}
-		
-		
-//		String[][] temp1 = new String [jets.length + 1][4];
-//		for (int i = 0; i < temp1.length - 1; i++){
-//			temp1[i] = jets[i];
-//		}
-//		
-//		String[] addnew = {"Airbus XXXX", "511", "3,300", "98_000_000"};
-//		temp1[temp1.length - 1] = addnew;
-//		
-//		for (int row = 0; row < temp1.length; row++) {
-//			for (int col = 0; col < jets.length - 1; col++) {
-//				System.out.print(temp1[row][col].toString() + "\t\t");
-//			}
-//			System.out.println("");
-//		}
 	}
 	
 	private static int runMenu() {
