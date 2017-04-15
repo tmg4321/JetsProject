@@ -63,10 +63,10 @@ public class JetsTestDriver {
 
 	private static int runMenu() {
 
-		System.out.println("\n**********************************");
-		System.out.println("*     Jet Inventory Database     *");
-		System.out.println("**********************************");
-		System.out.println("\nEnter 1 to List Fleet");
+		System.out.println("\n|********************************|");
+		System.out.println("|     Jet Inventory Database     |");
+		System.out.println("|********************************|");
+		System.out.println("Enter 1 to List Fleet");
 		System.out.println("Enter 2 to View Fastest Jet");
 		System.out.println("Enter 3 to View Jet With Longest Range");
 		System.out.println("Enter 4 to Add New Jet To Fleet");
