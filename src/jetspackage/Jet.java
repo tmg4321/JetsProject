@@ -8,7 +8,7 @@ public class Jet {
 	private Double speed;
 	private Integer range;
 	private Double price;
-	
+
 	public Jet() {
 		this("unknown", 0.0, 0, 0.0, "unknown");
 	}
@@ -16,9 +16,9 @@ public class Jet {
 	public Jet(String model, Double speed, Integer range, Double price, String pilot) {
 		super();
 		this.model = model;
-		this.speed = speed/761.21;
+		this.speed = speed / 761.21;
 		this.range = range;
-		this.price = price/1_000_000;
+		this.price = price / 1_000_000;
 		this.pilot = pilot;
 	}
 
@@ -26,8 +26,8 @@ public class Jet {
 	public String toString() {
 		NumberFormat formatter = new DecimalFormat("#0.00");
 		StringBuilder builder = new StringBuilder();
-		builder.append(model).append("\t   speed: Mach ").append(formatter.format(speed)).append("   range: ").append(range)
-				.append(" NM").append("   price: ").append(price).append(" Million").append("\tpilot: ")
+		builder.append(model).append("\t   speed: Mach ").append(formatter.format(speed)).append("   range: ")
+				.append(range).append(" NM").append("   price: ").append(price).append(" Million").append("\tpilot: ")
 				.append(pilot);
 		return builder.toString();
 	}

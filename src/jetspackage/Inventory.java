@@ -3,7 +3,7 @@ package jetspackage;
 import java.util.Scanner;
 
 public class Inventory {
-	
+
 	public Jet[] findLongestRange(Jet[] jets) {
 		int j;
 		boolean flag = true;
@@ -64,10 +64,3 @@ public class Inventory {
 	}
 
 }
-
-// String [][] jets =
-// {{"Airbus A380-800", "646", "8_200", "404_000_000.00"},
-// {"Boeing 737-800", "543", "3,115", "79_000_000.00"},
-// {"Boeing 777-300ER", "564", "7,370", "320_000_000.00",},
-// {"Honda HondaJet", "435", "1,400", "4_500_000",},
-// {"Airbus A320", "511", "3,300", "98_000_000",}};
