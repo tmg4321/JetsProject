@@ -30,6 +30,7 @@ public class JetsTestDriver {
 			switch (menuChoice) {
 
 			case 1:
+
 				for (Jet jet : jets) {
 					System.out.println(jet.toString());
 				}
@@ -39,6 +40,14 @@ public class JetsTestDriver {
 				i.findFastest(jets);
 				System.out.print("\nFastest is " + jets[0].toString());
 				System.out.println("");
+				System.out.println("Press 1 to see the " + jets[0].getModel() + "'s Mach speed.");
+				System.out.println("Press 0 to return to the main menu. ");
+				Scanner kb = new Scanner(System.in);
+				String choice = kb.next();
+				if (choice.equals("1")) {
+					jet0.speedInMach(jets[0].getModel(), jet0.getSpeed());
+				} else {
+				} // anything other than "1" returns user to main menu
 				break;
 
 			case 3:
@@ -65,12 +74,12 @@ public class JetsTestDriver {
 
 		System.out.println("\n|********************************|");
 		System.out.println("|     Jet Inventory Database     |");
-		System.out.println("|********************************|");
-		System.out.println("Enter 1 to List Fleet");
-		System.out.println("Enter 2 to View Fastest Jet");
-		System.out.println("Enter 3 to View Jet With Longest Range");
-		System.out.println("Enter 4 to Add New Jet To Fleet");
-		System.out.println("Enter 5 to Quit");
+		System.out.println("\\********************************/");
+		System.out.println("  Enter 1 to List Fleet");
+		System.out.println("  Enter 2 to View Fastest Jet");
+		System.out.println("  Enter 3 to View Jet With Longest Range");
+		System.out.println("  Enter 4 to Add New Jet To Fleet");
+		System.out.println("  Enter 5 to Quit");
 		System.out.print(">>");
 
 		Scanner kb = new Scanner(System.in);

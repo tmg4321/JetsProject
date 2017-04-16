@@ -16,17 +16,27 @@ public class Jet {
 	public Jet(String model, Double speed, Integer range, Double price, String pilot) {
 		super();
 		this.model = model;
-		this.speed = speed / 761.21;
+		this.speed = speed;
 		this.range = range;
 		this.price = price / 1_000_000;
 		this.pilot = pilot;
 	}
+	
+	public void speedInMach(String model, double x) {
+		NumberFormat formatter = new DecimalFormat("#0.00");
+		double mak = x / 761.21;
+		System.out.println(model +"'s Mach speed is:" + formatter.format(mak));
+		
+	}
+	
+	public void whatPilot(String x) {
+		System.out.println("jet4's pilot is: " + x);
+	}
 
 	@Override
 	public String toString() {
-		NumberFormat formatter = new DecimalFormat("#0.00");
 		StringBuilder builder = new StringBuilder();
-		builder.append(model).append("\t   speed: Mach ").append(formatter.format(speed)).append("   range: ")
+		builder.append(model).append("\t   speed:").append(speed).append(" MPH").append("   range: ")
 				.append(range).append(" NM").append("   price: ").append(price).append(" Million").append("\tpilot: ")
 				.append(pilot);
 		return builder.toString();
@@ -62,6 +72,14 @@ public class Jet {
 
 	public void setPrice(Double price) {
 		this.price = price;
+	}
+	
+	public String getPilot() {
+		return pilot;
+	}
+	public void setPilot(String x) {
+		this.pilot = x;
+	
 	}
 
 }
