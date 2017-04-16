@@ -37,7 +37,7 @@ public class Jet {
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append(model).append("\t   speed:").append(speed).append(" MPH").append("   range: ")
-				.append(range).append(" NM").append("   price: ").append(price).append(" Million").append("\tpilot: ")
+				.append(range).append(" NM").append("   price: ").append(price).append(" Million").append(" \tpilot: ")
 				.append(pilot);
 		return builder.toString();
 	}
